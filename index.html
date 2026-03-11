@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Clinic</title>
+    <title>Dental Clinic Landing Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,26 +11,72 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        .services {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+        .services h2 {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin-bottom: 15px;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .main-content {
+            padding: 20px;
+            width: 70%;
+        }
+        .appointment {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .appointment:hover {
+            background-color: #45a049;
+        }
+        .family-friendly {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2em;
         }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Trebuchet+MS">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Dental Clinic</h1>
-        <img src="logo.png" alt="Clinic Logo">
-    </header>
-    <main>
-        <p>Providing the best dental care.</p>
-        <img src="header.jpg" alt="Dental Clinic">
-    </main>
+    <div class="container">
+        <div class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Cosmetics</li>
+                <li>Endodontics</li>
+                <li>Orthodontics</li>
+                <li>Implants</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 class="family-friendly">Welcome to Your Family Dental Clinic!</h1>
+            <p>Serving you with care and attention, we ensure a friendly environment for your family.</p>
+            <button class="appointment">Set Appointment</button>
+        </div>
+    </div>
 </body>
 </html>
