@@ -1,58 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Clinic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Helvetica', sans-serif;
-            background-image: url('header.jpg');
-            background-size: cover;
-            animation: fadeIn 1s;
-        }
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .services {
-            padding: 2rem;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            max-width: 800px;
-            margin: 2rem auto;
-            animation: slideIn 1s;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VZ Dental Clinic</title>
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts for a modern clean look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Dental Clinic</h1>
-    </header>
-    <section class="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Preventive Care</li>
-            <li>Cosmetic Dentistry</li>
-            <li>Orthodontics</li>
-            <li>Oral Surgery</li>
-        </ul>
+  <!-- MAIN PAGE WRAPPER -->
+  <div class="page-shell">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <!-- Background image -->
+      <div class="hero-bg"></div>
+
+      <!-- Dark overlay on top of image -->
+      <div class="hero-overlay"></div>
+
+      <!-- Top navigation -->
+      <header class="navbar">
+        <div class="logo">
+          <div class="logo-icon">✦</div>
+          <div class="logo-text">
+            <span>VZ</span>
+            <span>Dental Clinic</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#doctor">Doctor</a>
+          <a href="#work">Our Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-cta">Book Now</a>
+      </header>
+
+      <!-- Hero content -->
+      <div class="hero-content">
+        <div class="hero-left">
+          <p class="eyebrow">
+            We help you achieve a brighter, healthier, more confident smile
+          </p>
+
+          <h1>
+            Have a shining smile with our modern methods!
+          </h1>
+
+          <p class="hero-description">
+            At VZ Dental Clinic, we combine gentle care, modern equipment,
+            and personalized treatment plans to help every patient smile with confidence.
+          </p>
+
+          <!-- Small tags/buttons like in the reference image -->
+          <div class="hero-tags">
+            <span>Teeth Whitening</span>
+            <span>Dental Implants</span>
+            <span>Braces</span>
+            <span>Smile Design</span>
+            <span>Checkups</span>
+          </div>
+
+          <!-- Main hero buttons -->
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            <a href="#services" class="btn btn-secondary">View Services</a>
+          </div>
+        </div>
+
+        <!-- Floating cards on the right side -->
+        <div class="hero-right">
+          <div class="glass-card feature-card">
+            <h2>Modern Dental Care</h2>
+            <p>
+              We use up-to-date techniques and technology to make treatments
+              more comfortable, effective, and precise.
+            </p>
+            <a href="#about" class="card-link">Learn more</a>
+          </div>
+
+          <div class="glass-card price-card">
+            <div class="mini-profile">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80"
+                alt="Happy patient"
+              />
+              <div>
+                <h3>Patient Favorite</h3>
+                <p>Smile Whitening</p>
+              </div>
+            </div>
+
+            <p class="price-label">Special offer this week</p>
+            <p class="price">$280.00</p>
+
+            <p class="price-text">
+              Brighten your smile with our professional whitening treatment,
+              designed for safe and visible results.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section services" id="services">
+      <div class="section-heading">
+        <p class="section-tag">Our Services</p>
+        <h2>Dental care made simple and comfortable</h2>
+        <p>
+          From preventive care to cosmetic improvements, we offer a full range
+          of services for your oral health and smile goals.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Teeth Whitening</h3>
+          <p>Safe and effective whitening treatments for a brighter smile.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Dental Implants</h3>
+          <p>Strong, natural-looking replacements for missing teeth.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Braces & Alignment</h3>
+          <p>Solutions to help straighten teeth and improve bite alignment.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Routine Checkups</h3>
+          <p>Professional cleaning, exams, and preventive care for every age.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Smile Design</h3>
+          <p>Cosmetic improvements tailored to your facial features and goals.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Emergency Care</h3>
+          <p>Quick attention for urgent dental discomfort and sudden problems.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+      <div class="about-text">
+        <p class="section-tag">About Us</p>
+        <h2>Gentle treatment with a modern approach</h2>
+        <p>
+          We believe great dental care should feel welcoming, clear, and stress-free.
+          Our clinic focuses on patient comfort, trusted advice, and beautiful results.
+        </p>
+        <p>
+          Whether you need a simple cleaning or a full smile transformation,
+          we guide you step by step so you always know what to expect.
+        </p>
+      </div>
+
+      <div class="about-image-card">
+        <img
+          src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80"
+          alt="Dental clinic interior"
+        />
+      </div>
+    </section>
+
+    <!-- DOCTOR SECTION -->
+    <section class="section doctor" id="doctor">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1000&q=80"
+            alt="Dentist portrait"
+          />
+        </div>
+
+        <div class="doctor-info">
+          <p class="section-tag">Meet the Dentist</p>
+          <h2>Professional care you can trust</h2>
+          <p>
+            Our team is committed to delivering high-quality treatment with a
+            warm and patient-first experience. We listen carefully, explain clearly,
+            and treat every smile with attention to detail.
+          </p>
+          <p>
+            You can replace this section later with your real name, credentials,
+            experience, and clinic story.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / SHOWCASE SECTION -->
+    <section class="section work" id="work">
+      <div class="section-heading">
+        <p class="section-tag">Our Work</p>
+        <h2>Smile transformations we’re proud of</h2>
+        <p>
+          Showcase your best dentist work here using treatment photos,
+          before-and-after examples, or featured smile improvements.
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <img
+            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
+            alt="Dental work example 1"
+          />
+          <div class="work-card-content">
+            <h3>Whitening Treatment</h3>
+            <p>Brighter, cleaner smile achieved with safe in-clinic whitening.</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80"
+            alt="Dental work example 2"
+          />
+          <div class="work-card-content">
+            <h3>Smile Restoration</h3>
+            <p>Restored confidence with customized cosmetic care.</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img
+            src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80"
+            alt="Dental work example 3"
+          />
+          <div class="work-card-content">
+            <h3>Implant Solution</h3>
+            <p>Functional and natural-looking replacement for a missing tooth.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="section testimonials">
+      <div class="section-heading">
+        <p class="section-tag">Testimonials</p>
+        <h2>What patients say about us</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <p>
+            “The team made me feel comfortable from the first visit. Everything
+            was explained clearly, and I love the result.”
+          </p>
+          <h4>— Sarah M.</h4>
+        </article>
+
+        <article class="testimonial-card">
+          <p>
+            “Clean clinic, friendly staff, and very professional treatment.
+            I finally feel confident smiling in photos again.”
+          </p>
+          <h4>— James T.</h4>
+        </article>
+
+        <article class="testimonial-card">
+          <p>
+            “I was nervous before my appointment, but they were gentle and patient.
+            I would definitely recommend this clinic.”
+          </p>
+          <h4>— Anita R.</h4>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="contact-box">
+        <div class="contact-info">
+          <p class="section-tag">Contact Us</p>
+          <h2>Book your visit today</h2>
+          <p>
+            Ready to improve your smile? Contact us to schedule a consultation
+            or ask any questions.
+          </p>
+
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> +1 234 567 890</li>
+            <li><strong>Email:</strong> hello@vzdentalclinic.com</li>
+            <li><strong>Location:</strong> Your Clinic Address Here</li>
+            <li><strong>Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Phone Number" />
+          <textarea placeholder="How can we help you?"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 VZ Dental Clinic. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
