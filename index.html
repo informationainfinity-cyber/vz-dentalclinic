@@ -4,33 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Clinic</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica', sans-serif;
+            background-image: url('header.jpg');
+            background-size: cover;
+            animation: fadeIn 1s;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .services {
+            padding: 2rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 2rem auto;
+            animation: slideIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="header-image.jpg" alt="Dental Clinic Header" class="header-image">
-        <div class="logo">
-            <img src="logo.png" alt="Clinic Logo">
-        </div>
+        <h1>Welcome to Our Dental Clinic</h1>
     </header>
-    <aside class="sidebar">
+    <section class="services">
         <h2>Our Services</h2>
         <ul>
-            <li>General Checkups</li>
+            <li>Preventive Care</li>
             <li>Cosmetic Dentistry</li>
             <li>Orthodontics</li>
-            <li>Emergency Care</li>
+            <li>Oral Surgery</li>
         </ul>
-    </aside>
-    <main>
-        <section class="content">
-            <h1>Welcome to Our Family-Friendly Dental Clinic!</h1>
-            <p>We offer a range of dental services that cater to all ages. Visit us for a caring and comfortable experience.</p>
-            <p>Our friendly staff is here to help you with all your dental needs. We understand the importance of oral health and are committed to providing excellent care.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Dental Clinic. All rights reserved.</p>
-    </footer>
+    </section>
 </body>
 </html>
