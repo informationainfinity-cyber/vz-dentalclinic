@@ -1,48 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VZ Dental Clinic</title>
 
-<meta name="description"
-content="Modern aesthetic dentistry with refined care, advanced treatments, and elegant results.">
+<style>
 
-<link rel="stylesheet" href="style.css">
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Helvetica, "Helvetica Neue", Futura, Arial, sans-serif;
+background:#060708;
+color:#f5f7fa;
+overflow-x:hidden;
+line-height:1.5;
+}
+
+/* ===== CURSOR GLOW ===== */
+
+.cursor-glow{
+position:fixed;
+width:120px;
+height:120px;
+background:rgba(130,200,255,.5);
+border-radius:50%;
+pointer-events:none;
+filter:blur(20px);
+transform:translate(-50%,-50%);
+z-index:9999;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+position:relative;
+min-height:100vh;
+overflow:hidden;
+}
+
+.hero-image{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.6);
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3));
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+position:relative;
+z-index:3;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:28px 60px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.brand-logo{
+width:40px;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+}
+
+.nav-links a{
+color:#e5e7eb;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav-button{
+border:1px solid rgba(255,255,255,.3);
+padding:10px 18px;
+border-radius:999px;
+text-decoration:none;
+color:white;
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content{
+position:relative;
+z-index:3;
+padding:120px 60px;
+max-width:900px;
+}
+
+.hero-kicker{
+letter-spacing:2px;
+font-size:12px;
+opacity:.7;
+margin-bottom:20px;
+}
+
+.hero-title{
+font-size:64px;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero-description{
+max-width:500px;
+opacity:.85;
+}
+
+.hero-actions{
+margin-top:30px;
+display:flex;
+gap:16px;
+}
+
+.btn{
+padding:14px 26px;
+border-radius:999px;
+text-decoration:none;
+font-size:14px;
+}
+
+.btn-primary{
+background:white;
+color:black;
+}
+
+.btn-secondary{
+border:1px solid white;
+color:white;
+}
+
+/* ===== SECTIONS ===== */
+
+.section{
+padding:120px 60px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-label{
+font-size:12px;
+letter-spacing:2px;
+opacity:.5;
+margin-bottom:10px;
+}
+
+.section-title{
+font-size:38px;
+margin-bottom:30px;
+}
+
+/* ===== SERVICES ===== */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.service-card{
+padding:24px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+}
+
+.service-number{
+opacity:.4;
+font-size:12px;
+margin-bottom:10px;
+}
+
+/* ===== ABOUT ===== */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-image-card{
+overflow:hidden;
+border-radius:20px;
+}
+
+.about-image-card img{
+width:100%;
+transition:transform .7s ease;
+}
+
+.about-image-card:hover img{
+transform:scale(1.1);
+}
+
+/* ===== WORK ===== */
+
+.work-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.work-card{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+}
+
+.work-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:transform .7s ease;
+}
+
+.work-card:hover img{
+transform:scale(1.1);
+}
+
+.work-overlay{
+position:absolute;
+bottom:20px;
+left:20px;
+}
+
+.work-category{
+font-size:12px;
+opacity:.6;
+margin-bottom:6px;
+}
+
+/* ===== STATEMENT ===== */
+
+.statement-line{
+font-size:40px;
+max-width:600px;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.03);
+color:white;
+}
+
+.contact-form button{
+padding:14px;
+border-radius:999px;
+border:none;
+background:white;
+color:black;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+border-top:1px solid rgba(255,255,255,.1);
+padding:30px 60px;
+display:flex;
+justify-content:space-between;
+}
+
+.footer-logo{
+width:22px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 
 </head>
 
-
 <body>
 
-<!-- Cursor Glow -->
 <div class="cursor-glow"></div>
 
+<section class="hero">
 
-<div class="site-shell">
-
-
-<!-- HERO -->
-<section class="hero" id="top">
-
-<div class="hero-background"></div>
-
-<div class="hero-image-wrap">
-<img src="hero.jpg" alt="Dental patient smiling" class="hero-image">
-</div>
+<img src="hero.jpg" class="hero-image">
 
 <div class="hero-overlay"></div>
-<div class="hero-gradient"></div>
-
 
 <header class="navbar">
 
-<a href="#top" class="brand">
-<img src="logo.png" alt="VZ Dental Clinic logo" class="brand-logo">
-<span class="brand-name">VZ Dental Clinic</span>
-</a>
+<div class="brand">
+<img src="logo.png" class="brand-logo">
+<span>VZ Dental Clinic</span>
+</div>
 
 <nav class="nav-links">
 <a href="#services">Services</a>
@@ -55,10 +349,7 @@ content="Modern aesthetic dentistry with refined care, advanced treatments, and 
 
 </header>
 
-
 <div class="hero-content">
-
-<div class="hero-copy">
 
 <p class="hero-kicker">
 Modern dentistry · aesthetic care · patient-first experience
@@ -82,309 +373,129 @@ designed to help you feel confident every time you smile.
 
 </div>
 
-
-<aside class="hero-panel">
-
-<p class="panel-label">Featured Treatment</p>
-
-<h2 class="panel-title">Smile Whitening</h2>
-
-<p class="panel-text">
-Brighten your smile with a treatment designed for comfort,
-clarity, and naturally luminous results.
-</p>
-
-<div class="panel-footer">
-<span class="panel-price">$280</span>
-<span class="panel-note">This week's featured service</span>
-</div>
-
-</aside>
-
-</div>
-
 </section>
 
-
-
-<!-- INTRO -->
-
-<section class="section intro-section">
-
-<div class="intro-grid">
-
-<div class="intro-left">
-
-<p class="section-label">Refined Care</p>
-
-<h2 class="section-title">
-Dentistry that feels calm,
-precise, and beautifully modern.
-</h2>
-
-</div>
-
-
-<div class="intro-right">
-
-<p class="section-text">
-At VZ Dental Clinic every treatment is approached with clarity,
-comfort, and careful attention to detail — creating an experience
-that feels smooth, reassuring, and thoughtfully designed.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- SERVICES -->
-
-<section class="section services-section" id="services">
-
-<div class="section-heading">
+<section class="section reveal" id="services">
 
 <p class="section-label">Services</p>
-
-<h2 class="section-title">
-Advanced treatments. Gentle care.
-</h2>
-
-</div>
-
+<h2 class="section-title">Advanced treatments. Gentle care.</h2>
 
 <div class="services-grid">
 
-<article class="service-card">
-
+<div class="service-card">
 <span class="service-number">01</span>
-
 <h3>Teeth Whitening</h3>
+<p>Professional whitening for a brighter smile.</p>
+</div>
 
-<p>
-Professional whitening treatments for a brighter,
-cleaner, more radiant smile.
-</p>
-
-</article>
-
-
-
-<article class="service-card">
-
+<div class="service-card">
 <span class="service-number">02</span>
-
 <h3>Dental Implants</h3>
+<p>Natural looking implants for long-lasting results.</p>
+</div>
 
-<p>
-Strong natural-looking solutions designed to restore
-function and confidence.
-</p>
-
-</article>
-
-
-
-<article class="service-card">
-
+<div class="service-card">
 <span class="service-number">03</span>
-
 <h3>Smile Design</h3>
+<p>Cosmetic treatments tailored to your features.</p>
+</div>
 
-<p>
-Cosmetic treatments tailored to your facial
-features and personal goals.
-</p>
-
-</article>
-
-
-
-<article class="service-card">
-
+<div class="service-card">
 <span class="service-number">04</span>
-
 <h3>Routine Care</h3>
-
-<p>
-Preventive checkups and cleaning that keep
-your smile healthy and polished.
-</p>
-
-</article>
+<p>Checkups and cleaning to keep your smile healthy.</p>
+</div>
 
 </div>
 
 </section>
 
-
-
-<!-- ABOUT -->
-
-<section class="section about-section" id="about">
+<section class="section reveal" id="about">
 
 <div class="about-grid">
 
-
-<div class="about-image-card image-hover-card">
-<img src="header.jpg" alt="Dental clinic interior">
+<div class="about-image-card">
+<img src="header.jpg">
 </div>
 
-
-<div class="about-copy">
-
+<div>
 <p class="section-label">About</p>
-
-<h2 class="section-title">
-A clinic experience shaped by comfort,
-trust, and detail.
-</h2>
-
-<p class="section-text">
-We combine modern dentistry with a warm human approach to care.
-Whether you are visiting for a simple checkup or a full smile
-transformation, our focus remains the same — thoughtful guidance,
-clear communication, and beautiful results.
-</p>
-
+<h2 class="section-title">Care built on comfort and trust.</h2>
+<p>We combine modern dental techniques with a warm, patient-focused approach.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="section reveal" id="work">
 
+<p class="section-label">Results</p>
+<h2 class="section-title">Subtle, confident outcomes.</h2>
 
-<!-- WORK / RESULTS -->
+<div class="work-grid">
 
-<section class="section work-section" id="work">
-
-<div class="section-heading">
-
-<p class="section-label">Selected Results</p>
-
-<h2 class="section-title">
-Subtle, refined, confident outcomes.
-</h2>
-
-</div>
-
-
-<div class="work-grid-minimal">
-
-
-<article class="work-card image-hover-card">
-
-<img src="6.jpg" alt="Dental whitening result">
-
+<div class="work-card">
+<img src="6.jpg">
 <div class="work-overlay">
 <p class="work-category">Whitening</p>
-<h3>Brighter tones, natural finish</h3>
+<h3>Brighter natural smile</h3>
+</div>
 </div>
 
-</article>
-
-
-
-<article class="work-card image-hover-card">
-
-<img src="8.jpg" alt="Dental smile design">
-
+<div class="work-card">
+<img src="8.jpg">
 <div class="work-overlay">
 <p class="work-category">Smile Design</p>
-<h3>Balanced shape and refined detail</h3>
+<h3>Balanced aesthetic result</h3>
+</div>
 </div>
 
-</article>
-
-
-
-<article class="work-card image-hover-card">
-
-<img src="9.jpg" alt="Dental restoration">
-
+<div class="work-card">
+<img src="9.jpg">
 <div class="work-overlay">
 <p class="work-category">Restoration</p>
-<h3>Comfort and confidence restored</h3>
+<h3>Confidence restored</h3>
 </div>
-
-</article>
+</div>
 
 </div>
 
 </section>
 
-
-
-<!-- STATEMENT -->
-
-<section class="section statement-section">
-
-<div class="statement-box">
+<section class="section reveal">
 
 <p class="statement-line">
 Beautiful smiles should feel effortless,
 healthy, and entirely your own.
 </p>
 
-</div>
-
 </section>
 
-
-
-<!-- CONTACT -->
-
-<section class="section contact-section" id="contact">
+<section class="section reveal" id="contact">
 
 <div class="contact-grid">
 
-
-<div class="contact-copy">
+<div>
 
 <p class="section-label">Contact</p>
+<h2 class="section-title">Let's create your next smile.</h2>
 
-<h2 class="section-title">
-Let's create your next smile with care.
-</h2>
-
-<p class="section-text">
-Book a consultation or ask about treatments.
-</p>
-
-
-<ul class="contact-list">
-
-<li><strong>Phone</strong> +1 234 567 890</li>
-
-<li><strong>Email</strong> hello@vzdentalclinic.com</li>
-
-<li><strong>Address</strong> Your clinic address here</li>
-
-<li><strong>Hours</strong> Mon – Sat / 9:00 – 18:00</li>
-
+<ul>
+<li>Phone — +1 234 567 890</li>
+<li>Email — hello@vzdentalclinic.com</li>
+<li>Address — Your clinic address</li>
 </ul>
 
 </div>
 
-
-
 <form class="contact-form">
 
-<input type="text" placeholder="Your name">
+<input placeholder="Your name">
+<input placeholder="Your email">
+<textarea placeholder="Message"></textarea>
 
-<input type="email" placeholder="Your email">
-
-<input type="text" placeholder="Phone number">
-
-<textarea placeholder="Tell us what you need"></textarea>
-
-<button type="submit" class="btn btn-primary">
-Send Request
-</button>
+<button>Send Request</button>
 
 </form>
 
@@ -392,60 +503,49 @@ Send Request
 
 </section>
 
-
-
-<!-- FOOTER -->
-
 <footer class="footer">
 
-<div class="footer-left">
-<img src="logo.png" alt="VZ Dental Clinic logo" class="footer-logo">
-<span>VZ Dental Clinic</span>
+<div>
+<img src="logo.png" class="footer-logo">
+VZ Dental Clinic
 </div>
 
-<div class="footer-right">
-<p>Modern dentistry · aesthetic care · premium results</p>
-</div>
+<p>Modern dentistry · aesthetic care</p>
 
 </footer>
 
-
-</div>
-
-
-
 <script>
 
-/* Cursor glow follow */
+/* cursor follow */
 
-const cursor = document.querySelector(".cursor-glow");
+const cursor=document.querySelector(".cursor-glow");
 
-window.addEventListener("mousemove", (e) => {
-cursor.style.left = e.clientX + "px";
-cursor.style.top = e.clientY + "px";
+window.addEventListener("mousemove",e=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 });
 
+/* scroll reveal */
 
-/* Expand glow on hover */
+function reveal(){
+const reveals=document.querySelectorAll(".reveal");
 
-const hoverItems = document.querySelectorAll(
-"a, button, .image-hover-card, .service-card, input, textarea"
-);
+for(let i=0;i<reveals.length;i++){
 
-hoverItems.forEach(item => {
+const windowHeight=window.innerHeight;
+const elementTop=reveals[i].getBoundingClientRect().top;
+const elementVisible=120;
 
-item.addEventListener("mouseenter", () => {
-cursor.classList.add("active");
-});
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
+}
 
-item.addEventListener("mouseleave", () => {
-cursor.classList.remove("active");
-});
+}
+}
 
-});
+window.addEventListener("scroll",reveal);
 
 </script>
-
 
 </body>
 </html>
