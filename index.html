@@ -6,36 +6,24 @@
   <title>VZ Dental Clinic</title>
   <meta
     name="description"
-    content="Modern aesthetic dentistry with refined care, advanced treatments, and beautifully designed smiles."
+    content="Modern aesthetic dentistry with refined care, advanced treatments, and elegant results."
   />
-
   <link rel="stylesheet" href="style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
 </head>
 <body>
-  <div class="site-shell">
+  <!-- custom cursor -->
+  <div class="cursor-glow"></div>
 
+  <div class="site-shell">
     <!-- HERO -->
     <section class="hero" id="top">
-      <!-- Background image layer -->
       <div class="hero-background"></div>
-
-      <!-- Main hero image -->
       <div class="hero-image-wrap">
         <img src="hero.jpg" alt="Smiling dental patient" class="hero-image" />
       </div>
-
-      <!-- Dark cinematic overlays -->
       <div class="hero-overlay"></div>
       <div class="hero-gradient"></div>
 
-      <!-- NAVBAR -->
       <header class="navbar">
         <a href="#top" class="brand">
           <img src="logo.png" alt="VZ Dental Clinic logo" class="brand-logo" />
@@ -52,7 +40,6 @@
         <a href="#contact" class="nav-button">Book Now</a>
       </header>
 
-      <!-- HERO CONTENT -->
       <div class="hero-content">
         <div class="hero-copy">
           <p class="hero-kicker">Modern dentistry / aesthetic care / patient-first experience</p>
@@ -65,7 +52,7 @@
 
           <p class="hero-description">
             Thoughtful dental care, advanced treatments, and elegant results —
-            crafted to help you feel confident every time you smile.
+            designed to help you feel confident every time you smile.
           </p>
 
           <div class="hero-actions">
@@ -74,19 +61,19 @@
           </div>
         </div>
 
-        <div class="hero-panel">
+        <aside class="hero-panel">
           <p class="panel-label">Featured Treatment</p>
           <h2 class="panel-title">Smile Whitening</h2>
           <p class="panel-text">
             Brighten your smile with a treatment designed for comfort,
-            clarity, and naturally luminous results.
+            clarity, and natural-looking results.
           </p>
 
           <div class="panel-footer">
             <span class="panel-price">$280</span>
             <span class="panel-note">This week’s featured service</span>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -96,17 +83,16 @@
         <div class="intro-left">
           <p class="section-label">Refined Care</p>
           <h2 class="section-title">
-            Dentistry designed to feel calm,
-            precise, and beautifully modern.
+            Dentistry that feels calm,
+            precise, and modern.
           </h2>
         </div>
 
         <div class="intro-right">
           <p class="section-text">
-            At VZ Dental Clinic, we believe exceptional dental care should feel
-            reassuring from the moment you arrive. Every treatment is approached
-            with clarity, comfort, and close attention to the details that shape
-            a confident smile.
+            At VZ Dental Clinic, every treatment is approached with clarity,
+            comfort, and attention to detail — creating a smooth experience
+            and a confident smile.
           </p>
         </div>
       </div>
@@ -116,40 +102,32 @@
     <section class="section services-section" id="services">
       <div class="section-heading">
         <p class="section-label">Services</p>
-        <h2 class="section-title">Advanced treatments with a gentle approach.</h2>
+        <h2 class="section-title">Advanced treatments. Gentle approach.</h2>
       </div>
 
       <div class="services-grid">
         <article class="service-card">
           <span class="service-number">01</span>
           <h3>Teeth Whitening</h3>
-          <p>
-            Professional whitening treatments for a brighter, fresher, more radiant smile.
-          </p>
+          <p>Professional whitening for a brighter, fresher smile.</p>
         </article>
 
         <article class="service-card">
           <span class="service-number">02</span>
           <h3>Dental Implants</h3>
-          <p>
-            Strong, natural-looking solutions designed to restore function and confidence.
-          </p>
+          <p>Natural-looking solutions designed for comfort and confidence.</p>
         </article>
 
         <article class="service-card">
           <span class="service-number">03</span>
           <h3>Smile Design</h3>
-          <p>
-            Cosmetic planning tailored to your features, smile line, and personal goals.
-          </p>
+          <p>Cosmetic planning tailored to your features and goals.</p>
         </article>
 
         <article class="service-card">
           <span class="service-number">04</span>
           <h3>Routine Care</h3>
-          <p>
-            Preventive checkups and cleanings that keep your smile healthy and polished.
-          </p>
+          <p>Checkups and cleanings that keep your smile healthy and polished.</p>
         </article>
       </div>
     </section>
@@ -157,7 +135,7 @@
     <!-- ABOUT -->
     <section class="section about-section" id="about">
       <div class="about-grid">
-        <div class="about-image-card">
+        <div class="about-image-card image-hover-card">
           <img src="header.jpg" alt="Dental clinic background visual" />
         </div>
 
@@ -168,27 +146,23 @@
           </h2>
           <p class="section-text">
             We combine modern methods with a warm, human approach to care.
-            Whether you are visiting for a simple checkup or a complete smile
-            transformation, our goal is always the same: to make the experience
-            feel seamless, reassuring, and beautifully considered.
-          </p>
-          <p class="section-text">
-            Clear guidance, thoughtful treatment planning, and refined results
-            are at the center of everything we do.
+            Whether you are visiting for a checkup or a complete smile
+            transformation, the experience is designed to feel seamless
+            and reassuring.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SHOWCASE -->
+    <!-- RESULTS -->
     <section class="section work-section" id="work">
       <div class="section-heading">
         <p class="section-label">Selected Results</p>
-        <h2 class="section-title">Work that speaks with subtle confidence.</h2>
+        <h2 class="section-title">Subtle, refined, confident outcomes.</h2>
       </div>
 
-      <div class="work-grid">
-        <article class="work-card work-card-large">
+      <div class="work-grid work-grid-minimal">
+        <article class="work-card image-hover-card">
           <img src="6.jpg" alt="Dental work showcase 1" />
           <div class="work-overlay">
             <p class="work-category">Whitening</p>
@@ -196,7 +170,7 @@
           </div>
         </article>
 
-        <article class="work-card">
+        <article class="work-card image-hover-card">
           <img src="8.jpg" alt="Dental work showcase 2" />
           <div class="work-overlay">
             <p class="work-category">Smile Design</p>
@@ -204,7 +178,7 @@
           </div>
         </article>
 
-        <article class="work-card">
+        <article class="work-card image-hover-card">
           <img src="9.jpg" alt="Dental work showcase 3" />
           <div class="work-overlay">
             <p class="work-category">Restoration</p>
@@ -214,12 +188,11 @@
       </div>
     </section>
 
-    <!-- PHILOSOPHY / STATEMENT -->
+    <!-- STATEMENT -->
     <section class="section statement-section">
       <div class="statement-box">
         <p class="statement-line">
-          “The most beautiful smiles never feel overdone —
-          they feel effortless, healthy, and entirely your own.”
+          Beautiful smiles should feel effortless, healthy, and entirely your own.
         </p>
       </div>
     </section>
@@ -231,7 +204,7 @@
           <p class="section-label">Contact</p>
           <h2 class="section-title">Let’s create your next smile with care.</h2>
           <p class="section-text">
-            Book a consultation, ask about treatments, or start planning your visit.
+            Book a consultation or ask about treatments.
           </p>
 
           <ul class="contact-list">
@@ -264,5 +237,28 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    const cursor = document.querySelector(".cursor-glow");
+
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+
+    const hoverItems = document.querySelectorAll(
+      "a, button, .image-hover-card, .service-card, input, textarea"
+    );
+
+    hoverItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        cursor.classList.add("active");
+      });
+
+      item.addEventListener("mouseleave", () => {
+        cursor.classList.remove("active");
+      });
+    });
+  </script>
 </body>
 </html>
